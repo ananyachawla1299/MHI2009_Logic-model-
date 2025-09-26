@@ -13,86 +13,96 @@
         }
         
         body {
-            font-family: 'Arial', 'Helvetica', sans-serif;
-            background: #f8f9fa;
+            font-family: 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 15px;
             color: #2c3e50;
             overflow-x: auto;
+            min-height: 100vh;
         }
         
         .download-btn {
             position: fixed;
             top: 15px;
             right: 15px;
-            background: #34495e;
+            background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
             border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
+            padding: 10px 16px;
+            border-radius: 25px;
             cursor: pointer;
-            font-size: 11px;
-            font-weight: 500;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             z-index: 1000;
+            transition: all 0.3s ease;
         }
         
         .download-btn:hover {
-            background: #2c3e50;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         
         .container {
-            width: 1800px;
-            height: 900px;
+            width: 1900px;
+            min-height: 1000px;
             margin: 0 auto;
             background: white;
-            border: 1px solid #dee2e6;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
         
         .header {
-            background: #34495e;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 15px 25px;
-            height: 70px;
+            padding: 20px 30px;
+            height: 90px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         
         .header h1 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 3px;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .header p {
-            font-size: 12px;
+            font-size: 14px;
             opacity: 0.9;
         }
         
+        .team-names {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 12px 30px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
         .vision {
-            background: #ecf0f1;
-            padding: 12px 25px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #bdc3c7;
+            background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
+            padding: 20px 30px;
+            border-bottom: 3px solid #3498db;
         }
         
         .vision h2 {
             color: #2c3e50;
-            font-size: 13px;
-            margin-right: 15px;
-            font-weight: 600;
-            white-space: nowrap;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
         
         .vision p {
             color: #34495e;
-            font-size: 11px;
-            line-height: 1.3;
+            font-size: 13px;
+            line-height: 1.5;
         }
         
         .main-content {
@@ -103,61 +113,92 @@
         
         .logic-flow {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            height: 400px;
-            border-bottom: 2px solid #34495e;
+            grid-template-columns: repeat(6, 1fr);
+            min-height: 500px;
+            border-bottom: 4px solid #34495e;
+            gap: 2px;
         }
         
         .flow-section {
-            border-right: 1px solid #dee2e6;
             display: flex;
             flex-direction: column;
-        }
-        
-        .flow-section:last-child {
-            border-right: none;
+            position: relative;
+            background: white;
         }
         
         .flow-header {
-            background: #f8f9fa;
-            padding: 12px;
+            padding: 15px;
             text-align: center;
-            border-bottom: 1px solid #dee2e6;
-            height: 60px;
+            height: 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        
+        /* Different colors for each section */
+        .flow-section:nth-child(1) .flow-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        }
+        
+        .flow-section:nth-child(2) .flow-header {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+        
+        .flow-section:nth-child(3) .flow-header {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        }
+        
+        .flow-section:nth-child(4) .flow-header {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        }
+        
+        .flow-section:nth-child(5) .flow-header {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+        }
+        
+        .flow-section:nth-child(6) .flow-header {
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
         }
         
         .flow-header h3 {
-            font-size: 13px;
-            font-weight: 700;
-            color: #2c3e50;
+            font-size: 15px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 3px;
+            letter-spacing: 0.8px;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .flow-header .subtitle {
-            font-size: 10px;
-            color: #7f8c8d;
+            font-size: 11px;
+            opacity: 0.9;
+            font-weight: 500;
         }
         
         .flow-content {
             flex: 1;
-            padding: 15px;
+            padding: 20px;
+            min-height: 400px;
             overflow-y: auto;
         }
         
         .flow-item {
-            background: #f8f9fa;
-            padding: 10px;
-            margin-bottom: 8px;
-            border: 1px solid #e9ecef;
-            border-radius: 3px;
-            font-size: 9px;
-            line-height: 1.4;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 15px;
+            margin-bottom: 12px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 11px;
+            line-height: 1.5;
             color: #495057;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .flow-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
         
         .flow-item:last-child {
@@ -167,19 +208,28 @@
         .flow-item strong {
             color: #2c3e50;
             display: block;
-            margin-bottom: 5px;
-            font-size: 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 700;
         }
         
         .flow-item ul {
             margin: 0;
-            padding-left: 12px;
-            list-style-type: disc;
+            padding-left: 15px;
+            list-style-type: none;
         }
         
         .flow-item li {
-            margin-bottom: 3px;
-            line-height: 1.3;
+            margin-bottom: 5px;
+            line-height: 1.4;
+            position: relative;
+        }
+        
+        .flow-item li:before {
+            content: "▶";
+            color: #3498db;
+            margin-right: 8px;
+            font-size: 8px;
         }
         
         .flow-item li:last-child {
@@ -190,53 +240,25 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-        }
-        
-        .outcomes-row {
-            height: 200px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            border-bottom: 1px solid #dee2e6;
-        }
-        
-        .outcome-column {
-            border-right: 1px solid #dee2e6;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .outcome-column:last-child {
-            border-right: none;
-        }
-        
-        .outcome-header {
-            background: #34495e;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-size: 12px;
-            font-weight: 700;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .outcome-content {
-            flex: 1;
-            padding: 15px;
-            background: white;
+            min-height: 450px;
         }
         
         .outcome-item {
-            background: #f8f9fa;
-            padding: 8px 10px;
-            margin-bottom: 8px;
-            border: 1px solid #e9ecef;
-            border-radius: 3px;
-            font-size: 10px;
-            line-height: 1.3;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 1.4;
             color: #495057;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .outcome-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
         
         .outcome-item:last-child {
@@ -244,133 +266,168 @@
         }
         
         .citation {
-            font-size: 9px;
+            font-size: 10px;
             color: #6c757d;
             font-style: italic;
-            margin-top: 3px;
+            margin-top: 5px;
         }
         
         .impact-assumptions-row {
-            height: 200px;
+            min-height: 250px;
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 2px;
         }
         
         .impact-section {
-            border-right: 1px solid #dee2e6;
             display: flex;
             flex-direction: column;
+            background: white;
         }
         
         .assumptions-section {
             display: flex;
             flex-direction: column;
+            background: white;
         }
         
         .section-header {
-            background: #ecf0f1;
-            padding: 10px;
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 15px;
             text-align: center;
-            border-bottom: 1px solid #bdc3c7;
-            height: 40px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
         .section-header h3 {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 700;
-            color: #2c3e50;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .section-content {
             flex: 1;
-            padding: 15px;
-            background: white;
+            padding: 20px;
+            min-height: 190px;
         }
         
         .impact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 15px;
             height: 100%;
         }
         
         .impact-item {
-            background: #f8f9fa;
-            padding: 10px;
-            border: 1px solid #dee2e6;
-            border-radius: 3px;
-            font-size: 10px;
-            line-height: 1.3;
-            color: #495057;
+            background: linear-gradient(135deg, #f39c12 10%, #f1c40f 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.4;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .impact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+        }
+        
+        .impact-item:nth-child(2) {
+            background: linear-gradient(135deg, #e74c3c 10%, #c0392b 100%);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .impact-item:nth-child(2):hover {
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+        
+        .impact-item:nth-child(3) {
+            background: linear-gradient(135deg, #27ae60 10%, #229954 100%);
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+        
+        .impact-item:nth-child(3):hover {
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+        }
+        
+        .impact-item:nth-child(4) {
+            background: linear-gradient(135deg, #9b59b6 10%, #8e44ad 100%);
+            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
+        }
+        
+        .impact-item:nth-child(4):hover {
+            box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
         }
         
         .impact-item strong {
-            color: #2c3e50;
-            margin-bottom: 5px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 13px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
         
         .assumptions-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 12px;
             height: 100%;
         }
         
         .assumption-item {
-            background: #f8f9fa;
-            padding: 8px;
-            border: 1px solid #dee2e6;
-            border-radius: 3px;
+            background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
+            padding: 15px;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .assumption-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            border-color: #3498db;
         }
         
         .assumption-item h4 {
-            font-size: 9px;
+            font-size: 11px;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .assumption-item p {
-            font-size: 9px;
-            line-height: 1.3;
+            font-size: 11px;
+            line-height: 1.4;
             color: #495057;
             flex: 1;
         }
         
         /* Flow arrows */
-        .flow-arrows {
-            position: absolute;
-            top: 50%;
-            right: -15px;
-            transform: translateY(-50%);
-            font-size: 20px;
-            color: #7f8c8d;
-        }
-        
-        .flow-section {
-            position: relative;
-        }
-        
         .flow-section:not(:last-child)::after {
             content: '→';
             position: absolute;
             right: -15px;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 18px;
-            color: #7f8c8d;
+            font-size: 24px;
+            color: #3498db;
+            font-weight: bold;
             z-index: 10;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         @media print {
@@ -385,11 +442,11 @@
             
             .container {
                 box-shadow: none;
-                border: none;
+                border-radius: 0;
             }
         }
         
-        @media (max-width: 1900px) {
+        @media (max-width: 2000px) {
             body {
                 overflow-x: scroll;
             }
@@ -397,12 +454,16 @@
     </style>
 </head>
 <body>
-    <button class="download-btn" onclick="downloadImage()">📄 Download</button>
+    <button class="download-btn" onclick="downloadImage()">📄 Download PNG</button>
     
     <div class="container" id="logic-model-container">
         <div class="header">
             <h1>Laboratory Information System Implementation Logic Model</h1>
             <p>500-bed Teaching Hospital Digital Transformation Initiative</p>
+        </div>
+        
+        <div class="team-names">
+            <strong>Project Team:</strong> Ananya Chawla • Kennedy Muli • Rachel Trister • Olajumoke Arinola
         </div>
         
         <div class="vision">
@@ -546,13 +607,19 @@
                         <span class="subtitle">3-6 months</span>
                     </div>
                     <div class="flow-content">
-                        <div class="flow-item">
+                        <div class="outcome-item">
                             28% reduction in transcription errors
                             <div class="citation">(Antonio et al., 2024)</div>
                         </div>
-                        <div class="flow-item">
+                        <div class="outcome-item">
                             Enhanced specimen tracking capabilities
                             <div class="citation">(Ligolab, 2025)</div>
+                        </div>
+                        <div class="outcome-item">
+                            Improved workflow efficiency and staff productivity
+                        </div>
+                        <div class="outcome-item">
+                            Reduced manual data entry requirements
                         </div>
                     </div>
                 </div>
@@ -564,13 +631,19 @@
                         <span class="subtitle">6-18 months</span>
                     </div>
                     <div class="flow-content">
-                        <div class="flow-item">
+                        <div class="outcome-item">
                             35% reduction in test turnaround times
                             <div class="citation">(Antonio et al., 2024)</div>
                         </div>
-                        <div class="flow-item">
+                        <div class="outcome-item">
                             85-90% clinician satisfaction rate
                             <div class="citation">(Antonio et al., 2024)</div>
+                        </div>
+                        <div class="outcome-item">
+                            Enhanced data quality and reporting capabilities
+                        </div>
+                        <div class="outcome-item">
+                            Improved regulatory compliance and audit readiness
                         </div>
                     </div>
                 </div>
@@ -582,13 +655,19 @@
                         <span class="subtitle">18+ months</span>
                     </div>
                     <div class="flow-content">
-                        <div class="flow-item">
+                        <div class="outcome-item">
                             Improved patient outcomes through timely diagnosis and treatment
                             <div class="citation">(St John, A., 2020)</div>
                         </div>
-                        <div class="flow-item">
+                        <div class="outcome-item">
                             Strengthened hospital accreditation readiness and compliance
                             <div class="citation">(Ligolab, 2025)</div>
+                        </div>
+                        <div class="outcome-item">
+                            Enhanced clinical decision-making through better data access
+                        </div>
+                        <div class="outcome-item">
+                            Reduced healthcare costs and resource optimization
                         </div>
                     </div>
                 </div>
@@ -656,7 +735,7 @@
             const button = document.querySelector('.download-btn');
             const originalText = button.innerHTML;
             
-            button.innerHTML = '⏳ Gen...';
+            button.innerHTML = '⏳ Generating...';
             button.disabled = true;
             
             try {
@@ -667,13 +746,13 @@
                     useCORS: true,
                     allowTaint: true,
                     backgroundColor: '#ffffff',
-                    width: 1800,
-                    height: 900
+                    width: 1900,
+                    height: 1000
                 });
                 
                 canvas.toBlob(function(blob) {
                     const link = document.createElement('a');
-                    link.download = 'LIS_Logic_Model_Landscape_' + new Date().toISOString().split('T')[0] + '.png';
+                    link.download = 'LIS_Logic_Model_Enhanced_' + new Date().toISOString().split('T')[0] + '.png';
                     link.href = URL.createObjectURL(blob);
                     
                     document.body.appendChild(link);
@@ -683,7 +762,7 @@
                     URL.revokeObjectURL(link.href);
                 }, 'image/png', 1.0);
                 
-                button.innerHTML = '✅ Done!';
+                button.innerHTML = '✅ Downloaded!';
                 setTimeout(() => {
                     button.innerHTML = originalText;
                     button.disabled = false;
